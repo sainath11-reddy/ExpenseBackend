@@ -32,5 +32,13 @@ exports.deleteExpense = (req, res, next)=>{
         return result.destroy()
     }).then(resolve =>{
         console.log(` ${expenseId} Successfully deleted`);
-    }).catch(err => {console.log(err);})
+    }).catch(err => {console.log(err);});
+    res.send("Deleted");
 }
+
+// exports.editExpense = (req, res, next) =>{
+//     const expenseId = req.params.expenseId;
+//     Expense.findByPk(expenseId).then(product =>{
+//         product.
+//     })
+// }
